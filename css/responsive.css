@@ -15,8 +15,6 @@
         width: 100vw;
     }
 
-
-
     /* Header */
 
     .header-section+section {
@@ -44,9 +42,7 @@
         background: none;
     }
 
-    .nav-item {
-        
-    }
+    .nav-item {}
 
     .search-icon {
         margin: 0 3rem 0 0;
@@ -54,15 +50,15 @@
     }
 
     /* slider-section */
-    .slider-section .f-row{
+    .slider-section .f-row {
         display: block;
     }
 
-    .detail-box{
+    .detail-box {
         width: 100%;
     }
 
-    .detail-box-top{
+    .detail-box-top {
         padding-bottom: 0;
     }
 
@@ -70,20 +66,23 @@
         font-size: 1.5rem;
     }
 
-    .companies{
+    .companies {
         padding-top: 0;
         width: 70%;
         margin: auto;
     }
 
+    .companies p{
+        text-align: center;
+    }
+
     .companies-logos {
         width: 100%;
+        
     }
 
     .companies-logos img {
-        width: 45%;
-        margin: 0.5rem;
-        padding-bottom: 1rem;
+        align-self: center;
     }
 
     .img-box {
@@ -109,8 +108,75 @@
     }
 
     .img-box .card p {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
+    /* Why section */
 
+    .why-section {
+        height: fit-content;
+        padding: 5rem 0;
+    }
+
+    .why-section>div {
+        display: block;
+        grid-template-areas: ". . . . . . . . . . . ."
+        "text text text text . cards cards cards cards cards cards ."
+        "text text text text . cards cards cards cards cards cards ."
+        "text text text text . cards cards cards cards cards cards ."
+        ". . . . . cards cards cards cards cards cards ."
+        ". . . . . . . . . . . .";
+    }
+
+    .why-section .cards {
+        grid-area: cards;
+        display: block;
+    }
+
+    .why-section .card .icon {
+        width: 4rem;
+        height: 4rem;  
+    }
+
+    .why-section .text {
+        text-align: center;
+    }
+
+    .why-section .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5rem 10rem;
+        padding: 1rem 2rem;
+        box-shadow: 0px 18px 58px 16px rgba(26, 26, 26, 0.02);
+        border-radius: 1rem;
+        background-color: #FCFCFC;
+    }
+
+    .why-section .text h2 {
+        font-size: 4rem;
+    }
+
+    .why-section p {
+        font-family: 'Poppins', sans-serif;
+        color: var(--grey-1);
+    }
+
+    .why-section .text p {
+        line-height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .why-section .card h3 {
+        font-size: 2rem;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .why-section .card p {
+        font-size: 1.5rem;
+        letter-spacing: normal;
+        text-align: center;
+    }
 }

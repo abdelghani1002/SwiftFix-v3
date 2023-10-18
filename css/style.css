@@ -304,12 +304,21 @@ a:hover {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas: ". . . . . . . . . . . ."
-        "text text text text . card1 card1 card1 card2 card2 card2 ."
-        "text text text text . card1 card1 card1 card2 card2 card2 ."
-        "text text text text . card3 card3 card3 card4 card4 card4 ."
-        ". . . . . card3 card3 card3 card4 card4 card4 ."
+        "text text text text . cards cards cards cards cards cards ."
+        "text text text text . cards cards cards cards cards cards ."
+        "text text text text . cards cards cards cards cards cards ."
+        ". . . . . cards cards cards cards cards cards ."
         ". . . . . . . . . . . .";
+}
 
+.why-section .cards {
+    grid-area: cards;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "card1 card2"
+                         "card3 card4"
 }
 
 .why-section .card .icon {
