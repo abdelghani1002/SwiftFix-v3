@@ -11,7 +11,7 @@
     }
 
     .layout-container {
-        padding: 1rem 2rem;
+        padding: 1rem 5rem;
         width: 100vw;
     }
 
@@ -45,11 +45,7 @@
     }
 
     .nav-item {
-        font-size: 1.3rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 1rem 3rem;
+        
     }
 
     .search-icon {
@@ -58,59 +54,41 @@
     }
 
     /* slider-section */
-    .slider-section {
-        display: flex;
+    .slider-section .f-row{
+        display: block;
     }
 
     .detail-box{
-        width: 60%;
+        width: 100%;
     }
 
-    .detail-box-top p {
-        font-size: 2rem;
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        font-weight: 500;
-        color: var(--grey-2);
-        margin-bottom: 4rem;
+    .detail-box-top{
+        padding-bottom: 0;
     }
 
     .detail-box-top a {
-        font-size: 1.3rem;
-        padding: 1.5rem 2rem;
-        width: 15rem;
+        font-size: 1.5rem;
     }
 
-    .companies p {
-        color: #474747;
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        font-size: 1.7rem;
+    .companies{
+        padding-top: 0;
+        width: 70%;
+        margin: auto;
     }
 
     .companies-logos {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 45%;
+        width: 100%;
     }
 
     .companies-logos img {
         width: 45%;
-        height: 30%;
         margin: 0.5rem;
         padding-bottom: 1rem;
     }
 
     .img-box {
-        background-image: url("../images/ellipses.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
+        width: 100%;
         display: block;
-        width: 40%;
-    }
-
-    .detail-box-top {
-        margin-bottom: 2rem;
     }
 
     .img-box img {
@@ -121,35 +99,17 @@
     }
 
     .img-box .card {
-        background-color: #ffffff;
-        position: absolute;
-        display: flex;
-        align-self: flex-end;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        box-shadow: var(--blue-1) 0 0 5px 1px;
-        border-radius: 1rem;
-        width: 30rem;
-        margin-bottom: -5rem;
-        gap: 1rem;
+        position: static;
+        width: 40rem;
+        margin: 0 auto -5rem auto;
     }
 
     .img-box .card h2 {
-        color: #33475B;
-        font-weight: bold;
-        font-family: 'Inter', sans-serif;
-        font-size: 2.4rem;
-        padding: 2rem 0 0 0;
-        margin: 0;
+        font-size: 3rem;
     }
 
     .img-box .card p {
-        color: var(--grey-1);
-        font-size: 2rem;
-        font-weight: 500;
-        padding: 0 0 2rem 0;
-        margin: 0;
+        font-size: 2.5rem;
     }
 
 
