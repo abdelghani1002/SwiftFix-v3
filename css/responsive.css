@@ -42,8 +42,6 @@
         background: none;
     }
 
-    .nav-item {}
-
     .search-icon {
         margin: 0 3rem 0 0;
         padding: 0;
@@ -72,13 +70,13 @@
         margin: auto;
     }
 
-    .companies p{
+    .companies p {
         text-align: center;
     }
 
     .companies-logos {
         width: 100%;
-        
+
     }
 
     .companies-logos img {
@@ -121,11 +119,11 @@
     .why-section>div {
         display: block;
         grid-template-areas: ". . . . . . . . . . . ."
-        "text text text text . cards cards cards cards cards cards ."
-        "text text text text . cards cards cards cards cards cards ."
-        "text text text text . cards cards cards cards cards cards ."
-        ". . . . . cards cards cards cards cards cards ."
-        ". . . . . . . . . . . .";
+            "text text text text . cards cards cards cards cards cards ."
+            "text text text text . cards cards cards cards cards cards ."
+            "text text text text . cards cards cards cards cards cards ."
+            ". . . . . cards cards cards cards cards cards ."
+            ". . . . . . . . . . . .";
     }
 
     .why-section .cards {
@@ -135,7 +133,7 @@
 
     .why-section .card .icon {
         width: 4rem;
-        height: 4rem;  
+        height: 4rem;
     }
 
     .why-section .text {
@@ -164,8 +162,8 @@
     }
 
     .why-section .text p {
-        line-height: 2.5rem;
-        font-size: 1.5rem;
+        line-height: 2.8rem;
+        font-size: 1.8rem;
     }
 
     .why-section .card h3 {
@@ -179,4 +177,39 @@
         letter-spacing: normal;
         text-align: center;
     }
+
+    /* Achievement */
+
+    .achievement-section .f-col {
+        width: 100%;
+    }
+
+    .achievement-section p {
+        font-size: 1.5rem;
+        letter-spacing: normal;
+    }
+
+    .achievement-section-top {
+        margin-bottom: 2rem;
+    }
+
+    .achievement-section-bottom div:nth-child(2) {
+        margin: 0;
+        padding: 0 4rem;
+    }
+
+    .achievement-section-bottom h2 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .achievement-section-bottom p{
+        text-align: center;
+    }
+
+
+
+
+
 }
