@@ -1,0 +1,882 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@500&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@400&display=swap');
+
+:root {
+    font-size: 10px;
+    --blue-1: #F2F7FF;
+    --blue-10: #094B72;
+    --grey-1: #666767;
+    --grey-2: #4F4F4F;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    ;
+}
+
+h1 {
+    margin: 0 !important;
+    font-size: 7rem !important;
+    line-height: 7rem;
+    color: var(--blue-10);
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+p {
+    letter-spacing: 0.8px;
+}
+
+a:hover {
+    font-weight: 600;
+}
+
+.active {
+    font-weight: 600;
+    border-bottom: 1px solid var(--blue-10);
+}
+
+.active a:hover {
+    cursor: progress;
+}
+
+.active a {
+    color: var(--blue-10);
+}
+
+.f-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.f-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.s-between {
+    justify-content: space-between;
+}
+
+.layout-container {
+    padding: 2rem 10rem;
+}
+
+.layout-container2 {
+    padding: 1rem 10rem;
+}
+
+.layout_padding2-bottom {
+    padding-bottom: 1.5rem;
+}
+
+.layout_padding-top {
+    padding-top: 5rem
+}
+
+.layout_padding-bottom {
+    padding-bottom: 5rem;
+}
+
+.layout_padding3-right {
+    padding-right: 1rem;
+}
+
+.margin_right-1 {
+    margin-right: 1rem;
+}
+
+.btn {
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #094B72;
+    border-radius: 1rem;
+    color: #F9F8F9;
+    background-color: var(--blue-10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: #053e60;
+}
+
+/* Header */
+
+.header-section {
+    background-color: #f2f7ffc9;
+    position: fixed;
+    width: 100%;
+    height: 14vh;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(15px);   
+    box-shadow: 0px 2px 40px rgba(88, 77, 77, 0.1);
+}
+
+.header-section + section {
+    margin: 14vh 0 0 0;
+}
+
+.navbar-brand {
+    margin-right: auto;
+}
+
+.navbar {
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    width: 65rem;
+    padding: 0;
+}
+
+.nav-item {
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+#li-search {
+    margin-left: 15rem;
+}
+
+.nav-link {
+    color: #2D2F30;
+}
+
+.navbar a:hover {
+    color: var(--blue-10);
+}
+
+/* slider-section */
+.slider-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-box,
+.img-box {
+    width: 50%;
+}
+
+.detail-box-top p {
+    font-size: 2rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    color: var(--grey-2);
+    margin-bottom: 4rem;
+}
+
+.detail-box-top a {
+    font-size: 1.3rem;
+    padding: 1.5rem 2rem;
+    width: 15rem;
+}
+
+.companies p {
+    color: #474747;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.7rem;
+}
+
+.companies-logos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.companies-logos img {
+    width: 45%;
+    height: 30%;
+    margin: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.img-box {
+    background-image: url("../images/ellipses.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.detail-box-top {
+    margin-bottom: 2rem;
+}
+
+.img-box img {
+    padding: 3rem 3rem 0 3.5rem;
+    width: 100%;
+    height: 100%;
+    margin-left: 3rem;
+}
+
+.img-box .card {
+    background-color: #ffffff;
+    position: absolute;
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--blue-1) 0 0 5px 1px;
+    border-radius: 1rem;
+    width: 30rem;
+    margin-bottom: -5rem;
+    gap: 1rem;
+}
+
+.img-box .card h2 {
+    color: #33475B;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-size: 2.4rem;
+    padding: 2rem 0 0 0;
+    margin: 0;
+}
+
+.img-box .card p {
+    color: var(--grey-1);
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0 0 2rem 0;
+    margin: 0;
+}
+
+/* Why section */
+
+.why-section {
+    display: flex;
+    height: 100vh;
+    background-color: #F2F7FF;
+}
+
+.why-section>div {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: ". . . . . . . . . . . ."
+        "text text text text . card1 card1 card1 card2 card2 card2 ."
+        "text text text text . card1 card1 card1 card2 card2 card2 ."
+        "text text text text . card3 card3 card3 card4 card4 card4 ."
+        ". . . . . card3 card3 card3 card4 card4 card4 ."
+        ". . . . . . . . . . . .";
+
+}
+
+.why-section .card .icon {
+    width: 3rem;
+    height: 3rem;
+    padding-bottom: 1rem;
+}
+
+.why-section .text {
+    grid-area: text;
+}
+
+.why-section-card1 {
+    grid-area: card1;
+}
+
+.why-section-card2 {
+    grid-area: card2;
+}
+
+.why-section-card3 {
+    grid-area: card3;
+}
+
+.why-section-card4 {
+    grid-area: card4;
+}
+
+.why-section .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+    box-shadow: 0px 18px 58px 16px rgba(26, 26, 26, 0.02);
+    border-radius: 1rem;
+    background-color: #FCFCFC;
+}
+
+.why-section .text h2 {
+    font-size: 4rem;
+}
+
+.why-section p {
+    font-family: 'Poppins', sans-serif;
+    color: var(--grey-1);
+}
+
+.why-section .text p {
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.why-section .card h3 {
+    font-size: 1.7rem;
+    margin: 0;
+    line-height: 2rem;
+}
+
+.why-section .card p {
+    font-size: 1.2rem;
+}
+
+/* Achievement */
+
+.achievement-section {
+    height: 40vh;
+    background-color: var(--blue-10);
+    background-image: url(../images/Patterns.svg);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.achievement-section .f-col {
+    justify-content: space-around;
+    width: 60%;
+}
+
+.achievement-section .f-col div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.achievement-section .f-col h2 {
+    font-size: 4rem;
+    padding: 0;
+}
+
+.achievement-section p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.achievement-section-top {
+    margin-bottom: 2rem;
+}
+
+.achievement-section-top h2 {
+    margin: 0 0 0.5rem 0;
+}
+
+.achievement-section-bottom div:nth-child(2) {
+    border-left: 2px solid #ffffff40;
+    border-right: 2px solid #ffffff40;
+    margin: 0 2rem;
+    padding: 0 2rem;
+}
+
+.achievement-section-bottom h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* clients-section */
+
+.clients-section {
+    background-color: var(--blue-1);
+    height: 80vh;
+}
+
+.clients-section h2 {
+    font-size: 2.7rem;
+    font-family: 'Playfair Display';
+    margin: 2rem auto;
+}
+
+.clients-section h3 {
+    font-size: 1.5rem;
+    margin: 0 auto 1rem auto;
+    color: #2D2F30;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.clients-section .cards-box .card {
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    align-content: center;
+}
+
+.clients-section .card .text {
+    height: 85%;
+    background-color: #ffffff;
+    color: #4F4F4F;
+    text-align: center;
+    align-content: center;
+    line-height: 2rem;
+    font-size: 1.25rem;
+    padding: 2rem;
+    box-shadow: #094b7221 0 0 15px 1px;
+    border-radius: 1rem;
+}
+
+.clients-section .card .client-details {
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.clients-section .card .client-details .details-text{
+    margin: auto 0;
+}
+
+.clients-section .card .client-details h4 {
+    font-size: 1.5rem;
+    font-family: 'unter', sans-serif;
+    padding-top: 0.5rem;
+    margin: 0;
+}
+
+.clients-section .card .client-details p {
+    padding-top: 0.5rem;
+    margin: 0;
+}
+
+.clients-section .card .client-details div {
+    margin: 0.5rem;
+}
+
+.clients-section .card .client-details .details-text {
+    padding: 0.5rem 0;
+}
+
+.clients-section .card .triangle {
+    background-color: #ffffff;
+    width: 2rem;
+    height: 1.5rem;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    align-self: center;
+}
+
+/* Question sections */
+
+.question-section {
+    height: 50vh;
+    display: flex;
+}
+
+.question-section .layout-container {
+    justify-content: center;
+    align-self: center;
+}
+
+.question-section p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.question-section h2 {
+    font-size: 3rem;
+    margin: 0 0 2rem 0;
+    letter-spacing: 1.5px;
+}
+
+.question-section p {
+    letter-spacing: 1px;
+    width: 70%;
+    font-size: 1.5rem;
+    margin: 0 0 2rem 0;
+    line-height: 2.5rem;
+}
+
+.question-section .call-btn {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    width: 20rem;
+}
+
+.question-section .btn svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 1rem;
+}
+
+/* footer */
+
+/* Sup footer */
+.footer-section {
+    background-color: var(--blue-10);
+    height: 65vh;
+    color: #EEEFF4;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-section a {
+    color: #EEEFF4;
+}
+
+.sup-footer {
+    height: 85%;
+}
+
+.sup-footer>.f-row {
+    padding: 3rem 0;
+    width: 100%;
+}
+
+.sup-footer .logo-box,
+.sup-footer .links-box {
+    width: 50%;
+}
+
+.sup-footer .links-box ul {
+    list-style-type: none;
+    font-weight: 300;
+}
+
+.sup-footer .links-box ul li {
+    padding: 0.8rem;
+}
+
+.sup-footer .links-box ul li a{
+    font-size: small;
+    color: #ffffff;
+}
+
+.sup-footer .links-box ul .title{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+/* Sub footer */
+.sub-footer {
+    height: 15%;
+    background-color: #004D7B;
+    color: #D9DBE1;
+}
+
+.sub-footer .f-row {
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-footer .copyRight-box,
+.sub-footer .socialMedia-box {
+    height: 100%;
+    font-size: small;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+.sub-footer .socialMedia-box a {
+    padding-left: 1rem;
+}
+
+/* About Section */
+
+.about-section {
+    height: 100vh;
+}
+
+.about-section .f-row {
+    justify-content: space-between;
+    height: 100%;
+}
+
+.about-section .about-text,
+.about-section .about-img {
+    width: 50%;
+    justify-content: center;
+}
+
+.about-section .about-text .f-col {
+    justify-content: space-around;
+    height: 80%;
+    width: 80%;
+}
+
+.about-section .f-row .about-text h2 {
+    font-size: 5rem;
+    font-family: 'Playfair Display';
+    color: var(--blue-10);
+    margin-bottom: 0;
+}
+
+.about-section .f-row .about-text p {
+    color: #4F4F4F;
+    font-family: Plus Jakarta Sans;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 158%;
+    letter-spacing: 0.5px;
+    padding: 0;
+}
+
+.about-section .f-row .about-text .btn {
+    height: 4rem;
+    font-size: 1.5rem;
+    width: fit-content;
+    font-weight: 500;
+    padding: 1.5rem 2.8rem;
+}
+
+.about-section .f-row .about-img {
+    background-image: url("../images/plumber-making-ok-sign\ 1.png");
+    background-size: cover;
+}
+
+/* Contact section */
+
+.contact-section h2 {
+    font-size: 3rem;
+    font-family: 'Playfair Display';
+    color: var(--blue-10);
+}
+
+.contact-section form {
+    display: flex;
+    font-family: 'Poppons', sans-serif;
+    width: 90%;
+}
+
+.contact-section .contact-label {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-section input,
+.contact-section select,
+.contact-section textarea {
+    background-color: #ffffff;
+    outline: none;
+    font-size: 1.5rem;
+    border: none;
+    height: 4rem;
+    margin-bottom: 2.5rem;
+    padding-left: 2.5rem;
+    box-shadow: 0 0 4px 1px #094b7225;
+}
+
+.contact-section textarea {
+    padding-top: 2rem;
+    height: 10rem;
+    max-width: 100%;
+    resize: vertical;
+}
+
+.contact-section input::placeholder,
+.contact-section textarea::placeholder,
+.contact-section select {
+    color: var(--grey-1);
+    font-size: 1.2rem;
+}
+
+.contact-section button {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem 10rem;
+    margin: auto;
+    cursor: pointer;
+}
+
+.contact-section .contact-map iframe{
+    height: 90%;
+    width: 100%;
+    border: none;
+}
+
+/* Professional section */
+
+.professional-section {
+    height: 100vh;
+}
+
+.professional-section .f-row {
+    justify-content: space-between;
+    height: 100%;
+    padding: 5rem 0;
+}
+
+.professional-section .professional-text,
+.professional-section .professional-img {
+    width: 50%;
+    justify-content: center;
+}
+
+.professional-section .professional-text .f-col {
+    justify-content: flex-start;
+    height: 80%;
+    width: 80%;
+}
+
+.professional-section .f-row .professional-text h2 {
+    font-size: 3rem;
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    color: var(--blue-10);
+    margin-bottom: 0;
+}
+
+.professional-section .f-row .professional-text p {
+    color: #4F4F4F;
+    font-family: Plus Jakarta Sans;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 158%;
+    letter-spacing: 0.5px;
+    padding: 0;
+}
+
+.professional-section .f-row .professional-text .btn {
+    height: 4rem;
+    font-size: 1.5rem;
+    width: fit-content;
+    font-weight: 500;
+    padding: 1.5rem 2.8rem;
+}
+
+.professional-section .f-row .professional-img {
+    background-image: url("../images/professional-img.png.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Services section */
+
+.services-section{
+    height: 80vh;
+    background-color: var(--blue-1);
+}
+
+.services-section .layout-container{
+    text-align: center;
+    justify-content: space-between;
+    padding: 5rem 15rem;
+    height: 100%;
+}
+
+.services-section .layout-container h2{
+    color: var(--blue-10);
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.services-section .layout-container h2,
+.services-section .layout-container h3{
+    font-family: 'Playfair Display';
+}
+
+.services-section .layout-container .services-cards{
+    column-gap: 2rem;
+    margin: 0  0 2rem 0;
+    height: 60%;
+}
+
+.services-section .layout-container .f-row .card{
+    background-color: #ffffff;
+    color: black;
+    height: 100%;
+    padding: 2rem;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.15);
+    
+}
+.services-section .layout-container .f-row .card:hover{
+    background-color: var(--blue-10);
+    color: #ffffff;
+}
+
+.services-section .layout-container .f-row .maintenance-card:hover .maintenance-icon{
+    background-image: url("../images/icons/maintenance_white.svg");
+}
+
+.services-section .layout-container .f-row .electrical-card:hover .electrical-icon{
+    background-image: url("../images/icons/electrical_white.svg");
+}
+
+.services-section .layout-container .f-row .plumbing-card:hover .plumbing-icon{
+    background-image: url("../images/icons/plumbing_white.svg");
+}
+
+.services-section .layout-container .f-row .card .maintenance-icon{
+    width: 100%;
+    height: 40%;
+    margin: 0;
+    background-image: url("../images/icons/maintenance.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.services-section .layout-container .f-row .card .electrical-icon{
+    width: 100%;
+    height: 40%;
+    margin: 0;
+    background-image: url("../images/icons/electrical.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.services-section .layout-container .f-row .card .plumbing-icon{
+    width: 100%;
+    height: 40%;
+    margin: 0;
+    background-image: url("../images/icons/plumbing.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.services-section .layout-container .f-row .card p{
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+} 
+
+.services-section .layout-container .card h3{
+    font-size: 2rem;
+    margin: 1rem 0 ;
+}
+
+.services-section .layout-container .btn {
+    height: 4rem;
+    font-size: 1.5rem;
+    width: fit-content;
+    font-weight: 500;
+    padding: 1.5rem 2.8rem;
+    align-self: center;
+}
