@@ -184,9 +184,13 @@
         width: 100%;
     }
 
+    .achievement-section h2 {
+        font-size: 2rem;
+    }
+
     .achievement-section p {
-        font-size: 1.5rem;
-        letter-spacing: normal;
+        font-size: 1.8rem;
+        letter-spacing: 0.4px;
     }
 
     .achievement-section-top {
@@ -198,17 +202,109 @@
         padding: 0 4rem;
     }
 
-    .achievement-section-bottom h2 {
-        font-family: 'Poppins', sans-serif;
-        font-size: 2rem;
-        margin: 0;
+    .achievement-section-bottom .number {
+        align-self: baseline;
     }
 
-    .achievement-section-bottom p{
+    .achievement-section-bottom p {
         text-align: center;
     }
 
+    /* clients-section */
 
+    .clients-section .cards-box {
+        display: block;
+    }
+
+    .clients-section h2 {
+        font-size: 5rem;
+    }
+
+    .clients-section h3 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .clients-section .cards-box .card {
+        padding: 2rem;
+        font-family: 'Poppins', sans-serif;
+        align-content: center;
+    }
+
+    .clients-section .card .text {
+        font-size: 1.5rem;
+        letter-spacing: normal;
+    }
+
+    .clients-section .card .client-details {}
+
+    .clients-section .card .client-details h4 {
+        font-size: 2rem;
+    }
+
+    .clients-section .card .client-details p {
+        font-size: 1.5rem;
+    }
+
+    /* Question section */
+
+    .question-section h2,
+    .question-section p,
+    .question-section .call-btn {
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+    /* Footer */
+
+    /* Sup footer */
+
+    .sup-footer>.f-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+    }
+
+    .sup-footer .logo-box,
+    .sup-footer .links-box {
+        width: 100%;
+    }
+
+    .logo-box{
+        text-align: center;
+    }
+
+    .sup-footer .links-box ul{
+        padding: 0;
+        text-align: center;
+    }
+
+    .sup-footer .links-box ul .title{
+        font-size: 2.5rem;
+    }
+
+    .sup-footer .links-box ul li a{
+        font-size: 2.1rem;
+    }
+
+    /* Sub footer */
+
+    .sub-footer .f-row{
+        flex-direction: column-reverse;
+    }
+
+    .sub-footer .socialMedia-box{
+        margin: 1rem 0;
+    }
+
+    .sub-footer .socialMedia-box a {
+        padding-left: 3rem;
+    }
+
+    .sub-footer .copyRight-box{
+        padding: 1rem;
+    }
 
 
 
