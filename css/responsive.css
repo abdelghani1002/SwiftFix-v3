@@ -8,14 +8,15 @@
 /* Mobile paysage */
 @media (min-width: 768px) and (max-width: 1023px) {
 
-    /* Header */
     :root {
         font-size: 7px;
     }
-
+    
     .layout-container {
         padding: 2rem 5rem;
     }
+    
+    /* Header */
 
     .search-icon {
         margin: 0 2rem 0 0;
@@ -109,7 +110,7 @@
 
     .layout-container {
         padding: 1rem 5rem;
-        width: 100vw;
+        width: 100%;
     }
 
     /* Header */
@@ -398,6 +399,14 @@
         height: fit-content;
     }
 
+    .about-section .f-row .about-text p{
+        font-size: 1.8rem;
+    }
+
+    .about-section .f-row .about-text .btn {
+        font-size: 1.8rem;;
+    }
+
     .about-section .layout-container {
         flex-direction: column;
         justify-content: center;
@@ -416,6 +425,10 @@
 
     /* FAQ section */
 
+    .faq-section .faq-title{
+        font-size: 4rem;
+    }
+
     .faq-section .layout-container .faq-items-box{
         width: 100%;
     }
@@ -424,5 +437,51 @@
         width: 12;
         height: auto;
     }
+
+    /* Professional section */
+
+    .professional-section{
+        padding-bottom: 3rem;
+    }
+
+    .professional-section .professional-img{
+        display: none;
+    }
+
+    .professional-section .professional-text{
+        width: 100%;
+    }
+
+    .professional-section .professional-text .f-col{
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .professional-section .f-row .professional-text h2{
+        font-size: 4rem;
+    }
+
+    .professional-section .f-row .professional-text p{
+        font-size: 2rem;
+    }
+
+    /* Services section */
+
+    .services-section .layout-container h2{
+        font-size: 3.5rem;
+    }
+
+    .services-section .layout-container .services-cards{
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .services-section .layout-container .f-row .card{
+        width: 70%;
+        align-self: center;
+    }
+
+
+
 
 }

@@ -677,7 +677,7 @@ a:hover {
 }
 
 .about-section .f-row .about-text .btn {
-    height: 4rem;
+    height: auto;
     font-size: 1.5rem;
     width: fit-content;
     font-weight: 500;
@@ -820,13 +820,12 @@ a:hover {
 /* Professional section */
 
 .professional-section {
-    height: fit-content;
+    height: auto;
 }
 
 .professional-section .f-row {
     justify-content: space-between;
-    height: 100%;
-    padding: 5rem 0;
+    height: fit-content;
 }
 
 .professional-section .professional-text,
@@ -836,9 +835,9 @@ a:hover {
 }
 
 .professional-section .professional-text .f-col {
-    justify-content: flex-start;
-    height: 80%;
+    justify-content: space-between;
     width: 80%;
+    margin: 5rem 0;
 }
 
 .professional-section .f-row .professional-text h2 {
@@ -852,7 +851,7 @@ a:hover {
 .professional-section .f-row .professional-text p {
     color: #4F4F4F;
     font-family: Plus Jakarta Sans;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 500;
     line-height: 158%;
@@ -885,15 +884,13 @@ a:hover {
 .services-section .layout-container{
     text-align: center;
     justify-content: space-between;
-    padding: 5rem 15rem;
-    height: 100%;
 }
 
 .services-section .layout-container h2{
     color: var(--blue-10);
     font-size: 3rem;
+    margin: 2rem 0;
     font-weight: 900;
-    margin: 0;
 }
 
 .services-section .layout-container h2,
@@ -903,8 +900,8 @@ a:hover {
 
 .services-section .layout-container .services-cards{
     column-gap: 2rem;
-    margin: 0  0 2rem 0;
-    height: 60%;
+    height: auto;
+    padding: 0 0 3rem 0;
 }
 
 .services-section .layout-container .f-row .card{
@@ -913,10 +910,10 @@ a:hover {
     height: 100%;
     padding: 2rem;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.15);
-    
 }
+
 .services-section .layout-container .f-row .card:hover{
-    background-color: var(--blue-10);
+    background-image: linear-gradient(to bottom, #004D7B, #00a2ff);
     color: #ffffff;
 }
 
@@ -932,34 +929,24 @@ a:hover {
     background-image: url("../images/icons/plumbing_white.svg");
 }
 
-.services-section .layout-container .f-row .card .maintenance-icon{
-    width: 100%;
-    height: 40%;
+.services-section .layout-container .f-row .card .icon{
+    height: 7rem;
     margin: 0;
-    background-image: url("../images/icons/maintenance.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.services-section .layout-container .f-row .card .maintenance-icon{
+    background-image: url("../images/icons/maintenance.svg");
 }
 
 .services-section .layout-container .f-row .card .electrical-icon{
-    width: 100%;
-    height: 40%;
-    margin: 0;
     background-image: url("../images/icons/electrical.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .services-section .layout-container .f-row .card .plumbing-icon{
-    width: 100%;
-    height: 40%;
-    margin: 0;
     background-image: url("../images/icons/plumbing.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .services-section .layout-container .f-row .card p{
@@ -972,11 +959,11 @@ a:hover {
     margin: 1rem 0 ;
 }
 
-.services-section .layout-container .btn {
-    height: 4rem;
-    font-size: 1.5rem;
+.services-section .layout-container .card .btn{
+    height: auto;
+    font-size: 1.3rem;
     width: fit-content;
     font-weight: 500;
-    padding: 1.5rem 2.8rem;
-    align-self: center;
+    padding: 1rem 2rem;
+    margin: auto;
 }

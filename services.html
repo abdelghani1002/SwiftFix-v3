@@ -15,6 +15,7 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 </head>
 
 <body>
@@ -52,18 +53,32 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">SERVICES</a>
                 </li>
-            </ul><!-- 
-            <div class="d-none">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Dropdown button
+            </ul>
+            <div class="navbar-dropdown">
+                <button class="menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span><svg width="37" height="20" viewBox="0 0 37 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M34.918 2L2.91797 2" stroke="#094B72" stroke-width="4" stroke-linecap="round" />
+                            <path d="M34.918 10L2.91797 10" stroke="#094B72" stroke-width="4" stroke-linecap="round" />
+                            <path d="M34.918 18L2.91797 18" stroke="#094B72" stroke-width="4" stroke-linecap="round" />
+                        </svg>
+                    </span>
                 </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#clients">TESTIMONIALS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./services.html">SERVICES</a>
+                    </li>
                 </ul>
-            </div> -->
+            </div>
         </nav>
     </header>
     <!-- end Header -->
@@ -100,35 +115,41 @@
             <h2>OUR SERVICES</h2>
             <div class="services-cards f-row">
                 <a href="#" class="card maintenance-card">
-                    <div class="maintenance-icon"></div>
+                    <div class="maintenance-icon icon"></div>
                     <h3>Maintenance</h3>
                     <p>when looking at its layout. The point of using
                         Lorem Ipsum is that it has a more-or-less
                         normal
                     </p>
+                    <button class="btn">
+                        READ MORE
+                    </button>
                 </a>
 
                 <a href="#" class="card electrical-card">
-                    <div class="electrical-icon"></div>
+                    <div class="electrical-icon icon"></div>
                     <h3>Electrical</h3>
                     <p>when looking at its layout. The point of using
                         Lorem Ipsum is that it has a more-or-less
                         normal
                     </p>
+                    <button class="btn">
+                        READ MORE
+                    </button>
                 </a>
 
                 <a href="#" class="card plumbing-card">
-                    <div class="plumbing-icon"></div>
+                    <div class="plumbing-icon icon"></div>
                     <h3>Plumbing</h3>
                     <p>when looking at its layout. The point of using
                         Lorem Ipsum is that it has a more-or-less
                         normal
                     </p>
+                    <button class="btn">
+                        READ MORE
+                    </button>
                 </a>
             </div>
-            <a href="#" class="btn">
-                READ MORE
-            </a>
         </div>
     </section>
     <!-- end Services section -->
