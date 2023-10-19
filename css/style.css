@@ -812,9 +812,10 @@ a:hover {
 }
 
 .contact-section .contact-map iframe{
-    height: 90%;
+    height: 100%;
     width: 100%;
     border: none;
+    box-shadow: 0 0 4px 1px #094b7225;
 }
 
 /* Professional section */
