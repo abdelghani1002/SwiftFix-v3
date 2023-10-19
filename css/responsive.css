@@ -1,8 +1,105 @@
 /* Tablet and small screen computer */
-@media (min-width: 1024px) and (max-width: 1279px) {}
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .layout-container {
+        padding: 2rem 4rem;
+    }
+}
 
 /* Mobile paysage */
-@media (min-width: 768px) and (max-width: 1023px) {}
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Header */
+    :root {
+        font-size: 7px;
+    }
+
+    .layout-container {
+        padding: 2rem 5rem;
+    }
+
+    .search-icon {
+        margin: 0 2rem 0 0;
+    }
+
+    .nav-item {
+        margin: 1rem 1.5rem;
+    }
+
+    /* Why section */
+
+    .why-section {
+        height: fit-content;
+        padding: 3rem 0;
+    }
+
+    .why-section>div {
+        display: block;
+        width: 100%;
+    }
+
+    .why-section>div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .why-section .text h2 {
+        margin: 1rem auto;
+    }
+
+    .why-section .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        row-gap: 3rem;
+    }
+
+    .why-section .card {
+        width: 40%;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .why-section .card .icon {
+        width: 4rem;
+        height: 4rem;
+        align-self: center;
+    }
+
+    .why-section .text {
+        text-align: center;
+    }
+
+    /* Achievements */
+
+    .achievement-section p {
+        font-size: 1.5rem;
+        letter-spacing: 0.4px;
+    }
+
+    .achievement-section-bottom .number {
+        align-self: baseline;
+        text-align: center;
+    }
+
+    .achievement-section-bottom p {
+        font-size: 1.5rem;
+    }
+
+    /* Footer */
+
+    .sup-footer .links-box ul .title {
+        font-size: 2.2rem;
+    }
+
+    .sup-footer .links-box ul li a {
+        font-size: 1.8rem;
+        text-align: left;
+    }
+
+    .about-section {
+        height: max-content;
+    }
+}
 
 /* Mobile portrait */
 @media (max-width: 767px) {
@@ -118,12 +215,6 @@
 
     .why-section>div {
         display: block;
-        grid-template-areas: ". . . . . . . . . . . ."
-            "text text text text . cards cards cards cards cards cards ."
-            "text text text text . cards cards cards cards cards cards ."
-            "text text text text . cards cards cards cards cards cards ."
-            ". . . . . cards cards cards cards cards cards ."
-            ". . . . . . . . . . . .";
     }
 
     .why-section .cards {
@@ -159,9 +250,6 @@
     .why-section p {
         font-family: 'Poppins', sans-serif;
         color: var(--grey-1);
-    }
-
-    .why-section .text p {
         line-height: 2.8rem;
         font-size: 1.8rem;
     }
@@ -236,8 +324,6 @@
         letter-spacing: normal;
     }
 
-    .clients-section .card .client-details {}
-
     .clients-section .card .client-details h4 {
         font-size: 2rem;
     }
@@ -271,30 +357,30 @@
         width: 100%;
     }
 
-    .logo-box{
+    .logo-box {
         text-align: center;
     }
 
-    .sup-footer .links-box ul{
+    .sup-footer .links-box ul {
         padding: 0;
         text-align: center;
     }
 
-    .sup-footer .links-box ul .title{
+    .sup-footer .links-box ul .title {
         font-size: 2.5rem;
     }
 
-    .sup-footer .links-box ul li a{
+    .sup-footer .links-box ul li a {
         font-size: 2.1rem;
     }
 
     /* Sub footer */
 
-    .sub-footer .f-row{
+    .sub-footer .f-row {
         flex-direction: column-reverse;
     }
 
-    .sub-footer .socialMedia-box{
+    .sub-footer .socialMedia-box {
         margin: 1rem 0;
     }
 
@@ -302,10 +388,41 @@
         padding-left: 3rem;
     }
 
-    .sub-footer .copyRight-box{
+    .sub-footer .copyRight-box {
         padding: 1rem;
     }
 
+    /* About section */
 
+    .about-section{
+        height: fit-content;
+    }
+
+    .about-section .layout-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-section .about-text,
+    .about-section .about-img {
+        width: 100%;
+    }
+
+    .about-section .about-img{
+        display: none;
+    }
+
+
+    /* FAQ section */
+
+    .faq-section .layout-container .faq-items-box{
+        width: 100%;
+    }
+
+    .faq-section .layout-container .faq-item-btn-icon{
+        width: 12;
+        height: auto;
+    }
 
 }

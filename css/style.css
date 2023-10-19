@@ -39,7 +39,7 @@ h3 {
 }
 
 p {
-    letter-spacing: 0.8px;
+    letter-spacing: 0.5px;
 }
 
 a:hover {
@@ -466,7 +466,7 @@ a:hover {
 }
 
 .clients-section .card .text {
-    height: fit-content;
+    height: 100%;
     background-color: #ffffff;
     color: #4F4F4F;
     text-align: center;
@@ -484,7 +484,11 @@ a:hover {
 }
 
 .clients-section .card .client-details .details-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: auto 0;
+    height: 100%;
 }
 
 .clients-section .card .client-details h4 {
@@ -509,6 +513,7 @@ a:hover {
     height: 1.5rem;
     clip-path: polygon(0 0, 50% 100%, 100% 0);
     align-self: center;
+    margin-top: auto;
 }
 
 /* Question sections */
@@ -550,7 +555,7 @@ a:hover {
     margin-right: 1rem;
 }
 
-/* footer */
+/* Footer */
 
 /* Sup footer */
 .footer-section {
@@ -581,6 +586,7 @@ a:hover {
 .sup-footer .links-box ul {
     list-style-type: none;
     font-weight: 300;
+    padding-left: 0;
 }
 
 .sup-footer .links-box ul li {
@@ -590,7 +596,6 @@ a:hover {
 .sup-footer .links-box ul li a{
     font-size: small;
     color: #ffffff;
-    object-fit: cover;
 }
 
 .sup-footer .links-box ul .title{
@@ -626,7 +631,7 @@ a:hover {
 /* About Section */
 
 .about-section {
-    height: 100vh;
+    height: 80vh;
 }
 
 .about-section .f-row {
@@ -637,20 +642,27 @@ a:hover {
 .about-section .about-text,
 .about-section .about-img {
     width: 50%;
-    justify-content: center;
+}
+
+.about-section .f-row .about-img {
+    background: url("../images/plumber-making-ok-sign.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 50%;
 }
 
 .about-section .about-text .f-col {
-    justify-content: space-around;
-    height: 80%;
-    width: 80%;
+    margin: 2rem 0;
+    height: 100%;
+    justify-content: center;
+    gap: 3rem;
 }
 
 .about-section .f-row .about-text h2 {
     font-size: 5rem;
     font-family: 'Playfair Display';
     color: var(--blue-10);
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .about-section .f-row .about-text p {
@@ -672,10 +684,78 @@ a:hover {
     padding: 1.5rem 2.8rem;
 }
 
-.about-section .f-row .about-img {
-    background-image: url("../images/plumber-making-ok-sign\ 1.png");
-    background-size: cover;
+/* FAQ section */
+
+.faq-section{
+    background-color: #C3E8F1;
+    height: fit-content;
+    width: 100%;
 }
+
+.faq-section .f-col{
+    align-items: center;
+}
+
+.faq-section .faq-title{
+    font-size: 2.5rem;
+    margin: 0 0 2rem 0;
+}
+
+.faq-section .layout-container .faq-items-box{
+    width: 90%;
+}
+
+.faq-section .layout-container .faq-item{
+    margin-bottom: 1.5rem;
+}
+
+.faq-section .layout-container .faq-item,
+.faq-section .layout-container .faq-item .faq-item-btn,
+.faq-section .layout-container .faq-item .faq-item-txt{
+    align-content: center;
+    width: 100%;
+    font-family: 'Popping', sans-serif;
+    padding: 0 1rem;
+}
+
+.faq-section .layout-container .faq-item .faq-item-btn{
+    background-color: #f3f3f3;
+    border: 1px solid #c5cacb;
+    border-top-right-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
+    padding: 0 2rem;
+    outline: none;
+    box-shadow: #094b7221 0 0 15px 1px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: inline-flex;
+    width: 100%;
+}
+
+.faq-section .layout-container .faq-item .f-row{
+    align-content: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.faq-section .layout-container .faq-item-btn-icon{
+    margin: auto 0;
+}
+
+.faq-section .layout-container .faq-item .faq-item-txt{
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #c5cacb;
+    border-left: 1px solid #c5cacb;
+    border-right: 1px solid #c5cacb;
+    border-top: none;
+    border-bottom-right-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+}
+
+
+
 
 /* Contact section */
 
