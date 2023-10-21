@@ -38,10 +38,6 @@ h3 {
     font-family: 'Playfair Display', serif;
 }
 
-p {
-    letter-spacing: 0.5px;
-}
-
 a:hover {
     font-weight: 600;
 }
@@ -76,7 +72,7 @@ a:hover {
 }
 
 .layout-container {
-    padding: 2rem 10rem;
+    padding: 1rem 10rem;
 }
 
 .layout-container2 {
@@ -121,17 +117,36 @@ a:hover {
 /* Header */
 
 .header-section {
+    display: flex;
+    justify-content: space-between;
     background-color: #c3e8f1a6;
     position: fixed;
     width: 100vw;
-    height: fit-content;
+    height: auto;
     top: 0;
     z-index: 100;
     backdrop-filter: blur(15px);   
     box-shadow: 0px 2px 40px rgba(88, 77, 77, 0.1);
 }
 
-.navbar-dropdown{
+.header-section .header-left{
+    justify-content: space-between;
+}
+
+.header-buttons {
+    justify-content: end;
+    margin-right: 5rem;
+}
+
+.header-btn {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.header-buttons .nav-btn{
     display: none;
 }
 
@@ -139,11 +154,11 @@ a:hover {
     margin: 10rem 0 0 0;
 }
 
-.navbar-brand {
-    margin-right: auto;
+.navbar-box{
+    justify-content: center;
 }
 
-.navbar {
+.navbar, .navbar-nav {
     font-family: 'Poppins', Arial, sans-serif;
     display: flex;
     flex-direction: row;
@@ -151,8 +166,6 @@ a:hover {
 }
 
 .navbar-nav {
-    display: flex;
-    flex-direction: row;
     list-style-type: none;
     padding: 0;
 }
@@ -166,20 +179,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 1rem 3rem;
 }
 
-.search-icon {
-    margin:0 3rem 0 0;
-    padding: 0;
-}
-
-.search-icon button{
-    background: none;    
-    outline: none;
-    border: none;
-    cursor: pointer;
-}
 
 .search-icon button:hover{
     scale: 1.02;

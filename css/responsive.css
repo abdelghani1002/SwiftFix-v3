@@ -13,7 +13,7 @@
     }
 
     .layout-container {
-        padding: 2rem 5rem;
+        padding: 1rem 5rem;
     }
 
     /* Header */
@@ -24,6 +24,7 @@
 
     .nav-item {
         margin: 1rem 1.5rem;
+        font-size: 1.5rem;
     }
 
     /* Why section */
@@ -114,31 +115,45 @@
     }
 
     /* Header */
+    .header-section{
+        flex-direction: column; 
+    }
+
+    .header-buttons {
+        justify-content: end;
+        margin-right: 0;
+    }
+
+    .header-buttons .nav-btn{
+        display: block;
+    }
 
     .header-section+section {
         margin: 10rem 0 0 0;
     }
 
-    .navbar-dropdown {
-        display: flex;
-    }
-
     .navbar-nav {
-        display: none;
-        /* add drop down menu */
+        flex-direction: column;
+        text-align: center;
     }
 
-    .menu-btn {
-        margin: 0;
-        padding: 0;
-        outline: none;
-        border: none;
-        background: none;
+    .navbar-box {
+        display: none;
+        transform: scale(1);
+    }
+
+    .navbar-box.open{
+        display: block;
+    }
+
+    .navbar-nav .nav-item{
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 1.5rem auto;
     }
 
     .search-icon {
         margin: 0 3rem 0 0;
-        padding: 0;
     }
 
     /* slider-section */
@@ -148,6 +163,10 @@
 
     .detail-box {
         width: 100%;
+    }
+
+    .detail-box h2{
+        margin: 3rem 0;
     }
 
     .detail-box-top {
@@ -395,13 +414,16 @@
         height: fit-content;
     }
 
+    .about-section .f-row .about-text h2 { 
+        margin: 3rem 0 0 0;
+    }
     .about-section .f-row .about-text p {
-        font-size: 1.8rem;
+        font-size: 2.3rem;
+        margin: 0;
     }
 
     .about-section .f-row .about-text .btn {
-        font-size: 1.8rem;
-        ;
+        font-size: 2.3rem;
     }
 
     .about-section .layout-container {
@@ -423,16 +445,16 @@
     /* FAQ section */
 
     .faq-section .faq-title {
-        font-size: 4rem;
+        font-size: 5rem;
+    }
+
+    .faq-section .faq-item .faq-item-btn p,
+    .faq-section .faq-item .faq-item-txt div {
+        font-size: 2.5rem;
     }
 
     .faq-section .layout-container .faq-items-box {
         width: 100%;
-    }
-
-    .faq-section .layout-container .faq-item-btn-icon {
-        width: 12;
-        height: auto;
     }
 
     /* Professional section */
