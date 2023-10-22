@@ -51,7 +51,7 @@ a:hover {
     cursor: auto;
 }
 
-.active a {
+.active.nav-item .nav-link {
     color: var(--blue-10);
 }
 
@@ -108,12 +108,87 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .btn:hover {
     background-color: #053e60;
 }
 
+.overlay {
+    display: none;
+    position: fixed;
+    background: #000000ac;
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.search-modal {
+    display: none;
+    width: 35%;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    border: 1px solid var(--grey-1);
+    border-radius: 1rem;
+    z-index: 1000;
+    background-color: var(--blue-1);
+    font-family: 'Popping', sans-serif;
+}
+
+.search-modal .modal-header {
+    justify-content: space-between;
+}
+
+.search-modal .modal-header h2 {
+    font-family: 'Popping', sans-serif;
+    margin: 0;
+    font-size: 2rem;
+    color: var(--blue-10);
+}
+
+.search-modal .modal-header .btn-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+}
+
+.search-modal .modal-header .btn-close:hover svg path{
+    stroke: #e00000;
+}
+
+.search-modal .modal-body{
+    margin: 2rem 0;
+    padding: 0 3rem;
+}
+
+.search-modal .modal-body input{
+    width: 100%;
+    height: 5rem;
+    padding: 1.5rem;
+    border: 1px solid #b3befd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.8rem;
+}
+
+.search-modal .modal-footer{
+    justify-content: center;
+}
+
+.search-modal .modal-footer button{
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    gap: 1rem;
+}
 /* Header */
 
 .header-section {
@@ -124,18 +199,22 @@ a:hover {
     width: 100vw;
     height: auto;
     top: 0;
-    z-index: 100;
-    backdrop-filter: blur(15px);   
+    backdrop-filter: blur(15px);
     box-shadow: 0px 2px 40px rgba(88, 77, 77, 0.1);
 }
 
-.header-section .header-left{
+.header-section .header-left {
     justify-content: space-between;
 }
 
 .header-buttons {
     justify-content: end;
-    margin-right: 5rem;
+    margin-right: auto;
+}
+
+.header-buttons #search-btn svg:hover{
+    cursor: pointer;
+    transform: rotate(10deg) scale(1.1);
 }
 
 .header-btn {
@@ -144,21 +223,23 @@ a:hover {
     outline: none;
     border: none;
     background: none;
+    align-self: center;
 }
 
-.header-buttons .nav-btn{
+.header-buttons .nav-btn {
     display: none;
 }
 
-.header-section + section {
+.header-section+section {
     margin: 10rem 0 0 0;
 }
 
-.navbar-box{
+.navbar-box {
     justify-content: center;
+    margin-left: 3rem;
 }
 
-.navbar, .navbar-nav {
+.navbar-nav {
     font-family: 'Poppins', Arial, sans-serif;
     display: flex;
     flex-direction: row;
@@ -170,27 +251,22 @@ a:hover {
     padding: 0;
 }
 
-.navbar-nav:last-child{
+.navbar-nav:last-child {
     margin: 0;
 }
 
 .nav-item {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-
-.search-icon button:hover{
-    scale: 1.02;
+.navbar-nav .nav-item a{
+    color: rgb(67, 66, 66);
 }
 
-.nav-link {
-    color: #2D2F30;
-}
-
-.navbar a:hover {
+.navbar-nav .nav-item a:hover{
     color: var(--blue-10);
 }
 
@@ -210,13 +286,13 @@ a:hover {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
     color: var(--grey-2);
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .detail-box-top a {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding: 1.5rem 2rem;
-    width: 15rem;
+    width: max-content;
 }
 
 .companies p {
@@ -321,7 +397,7 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "card1 card2"
-                         "card3 card4"
+        "card3 card4"
 }
 
 .why-section .card .icon {
@@ -484,7 +560,7 @@ a:hover {
     padding-top: 1rem;
 }
 
-.clients-section .card .client-details .details-text{
+.clients-section .card .client-details .details-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -594,12 +670,12 @@ a:hover {
     padding: 0.8rem;
 }
 
-.sup-footer .links-box ul li a{
+.sup-footer .links-box ul li a {
     font-size: small;
     color: #ffffff;
 }
 
-.sup-footer .links-box ul .title{
+.sup-footer .links-box ul .title {
     font-weight: 600;
     font-size: 1.5rem;
 }
@@ -687,39 +763,39 @@ a:hover {
 
 /* FAQ section */
 
-.faq-section{
+.faq-section {
     background-color: #C3E8F1;
     height: fit-content;
     width: 100%;
 }
 
-.faq-section .f-col{
+.faq-section .f-col {
     align-items: center;
 }
 
-.faq-section .faq-title{
+.faq-section .faq-title {
     font-size: 2.5rem;
     margin: 0 0 2rem 0;
 }
 
-.faq-section .layout-container .faq-items-box{
+.faq-section .layout-container .faq-items-box {
     width: 90%;
 }
 
-.faq-section .layout-container .faq-item{
+.faq-section .layout-container .faq-item {
     margin-bottom: 1.5rem;
 }
 
 .faq-section .layout-container .faq-item,
 .faq-section .layout-container .faq-item .faq-item-btn,
-.faq-section .layout-container .faq-item .faq-item-txt{
+.faq-section .layout-container .faq-item .faq-item-txt {
     align-content: center;
     width: 100%;
     font-family: 'Popping', sans-serif;
     padding: 0 1rem;
 }
 
-.faq-section .layout-container .faq-item .faq-item-btn{
+.faq-section .layout-container .faq-item .faq-item-btn {
     background-color: #f3f3f3;
     border: 1px solid #c5cacb;
     border-top-right-radius: 0.8rem;
@@ -733,17 +809,17 @@ a:hover {
     width: 100%;
 }
 
-.faq-section .layout-container .faq-item .f-row{
+.faq-section .layout-container .faq-item .f-row {
     align-content: center;
     justify-content: space-between;
     gap: 1rem;
 }
 
-.faq-section .layout-container .faq-item-btn-icon{
+.faq-section .layout-container .faq-item-btn-icon {
     margin: auto 0;
 }
 
-.faq-section .layout-container .faq-item .faq-item-txt{
+.faq-section .layout-container .faq-item .faq-item-txt {
     background-color: #f3f3f3;
     border-bottom: 1px solid #c5cacb;
     border-left: 1px solid #c5cacb;
@@ -812,7 +888,7 @@ a:hover {
     cursor: pointer;
 }
 
-.contact-section .contact-map iframe{
+.contact-section .contact-map iframe {
     height: 100%;
     width: 100%;
     border: none;
@@ -878,17 +954,17 @@ a:hover {
 
 /* Services section */
 
-.services-section{
+.services-section {
     height: fit-content;
     background-color: var(--blue-1);
 }
 
-.services-section .layout-container{
+.services-section .layout-container {
     text-align: center;
     justify-content: space-between;
 }
 
-.services-section .layout-container h2{
+.services-section .layout-container h2 {
     color: var(--blue-10);
     font-size: 3rem;
     margin: 2rem 0;
@@ -896,17 +972,17 @@ a:hover {
 }
 
 .services-section .layout-container h2,
-.services-section .layout-container h3{
+.services-section .layout-container h3 {
     font-family: 'Playfair Display';
 }
 
-.services-section .layout-container .services-cards{
+.services-section .layout-container .services-cards {
     column-gap: 2rem;
     height: auto;
     padding: 0 0 3rem 0;
 }
 
-.services-section .layout-container .f-row .card{
+.services-section .layout-container .f-row .card {
     background-color: #ffffff;
     color: black;
     height: 100%;
@@ -914,24 +990,24 @@ a:hover {
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.15);
 }
 
-.services-section .layout-container .f-row .card:hover{
+.services-section .layout-container .f-row .card:hover {
     background-image: linear-gradient(to bottom, #004D7B, #00a2ff);
     color: #ffffff;
 }
 
-.services-section .layout-container .f-row .maintenance-card:hover .maintenance-icon{
+.services-section .layout-container .f-row .maintenance-card:hover .maintenance-icon {
     background-image: url("../images/icons/maintenance_white.svg");
 }
 
-.services-section .layout-container .f-row .electrical-card:hover .electrical-icon{
+.services-section .layout-container .f-row .electrical-card:hover .electrical-icon {
     background-image: url("../images/icons/electrical_white.svg");
 }
 
-.services-section .layout-container .f-row .plumbing-card:hover .plumbing-icon{
+.services-section .layout-container .f-row .plumbing-card:hover .plumbing-icon {
     background-image: url("../images/icons/plumbing_white.svg");
 }
 
-.services-section .layout-container .f-row .card .icon{
+.services-section .layout-container .f-row .card .icon {
     height: 7rem;
     margin: 0;
     background-size: contain;
@@ -939,29 +1015,29 @@ a:hover {
     background-position: center;
 }
 
-.services-section .layout-container .f-row .card .maintenance-icon{
+.services-section .layout-container .f-row .card .maintenance-icon {
     background-image: url("../images/icons/maintenance.svg");
 }
 
-.services-section .layout-container .f-row .card .electrical-icon{
+.services-section .layout-container .f-row .card .electrical-icon {
     background-image: url("../images/icons/electrical.svg");
 }
 
-.services-section .layout-container .f-row .card .plumbing-icon{
+.services-section .layout-container .f-row .card .plumbing-icon {
     background-image: url("../images/icons/plumbing.svg");
 }
 
-.services-section .layout-container .f-row .card p{
+.services-section .layout-container .f-row .card p {
     font-size: 1.5rem;
     font-family: 'Lato', sans-serif;
-} 
-
-.services-section .layout-container .card h3{
-    font-size: 2rem;
-    margin: 1rem 0 ;
 }
 
-.services-section .layout-container .card .btn{
+.services-section .layout-container .card h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.services-section .layout-container .card .btn {
     height: auto;
     font-size: 1.3rem;
     width: fit-content;

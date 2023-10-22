@@ -3,23 +3,35 @@
     .layout-container {
         padding: 2rem 4rem;
     }
+
+    .navbar-box{
+        margin-left: 4rem;
+    }
 }
 
 /* Mobile paysage */
 @media (min-width: 768px) and (max-width: 1023px) {
 
     :root {
-        font-size: 7px;
+        font-size: 9px;
     }
 
     .layout-container {
-        padding: 1rem 5rem;
+        padding: 1rem 3rem;
+    }
+
+    .search-modal{
+        width: 70%;
     }
 
     /* Header */
 
     .search-icon {
         margin: 0 2rem 0 0;
+    }
+
+    .navbar-box{
+        margin-left: 0;
     }
 
     .nav-item {
@@ -106,12 +118,33 @@
 /* Mobile portrait */
 @media (max-width: 767px) {
     :root {
-        font-size: 5px;
+        font-size: 6px;
     }
 
     .layout-container {
-        padding: 1rem 5rem;
+        padding: 1rem 4rem;
         width: 100%;
+    }
+
+    .search-modal{
+        width: 80%;
+    }
+
+    .search-modal .modal-header h2 {
+        font-size: 3rem;
+    }
+    
+    .search-modal .modal-body input{
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid #b3befd;
+        border-radius: 5px;
+        outline: none;
+        font-size: 2.8rem;
+    }
+    
+    .search-modal .modal-footer button{
+        font-size: 2.5rem;
     }
 
     /* Header */
@@ -139,7 +172,7 @@
 
     .navbar-box {
         display: none;
-        transform: scale(1);
+        margin: 0;
     }
 
     .navbar-box.open{
@@ -147,7 +180,7 @@
     }
 
     .navbar-nav .nav-item{
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: bold;
         margin: 1.5rem auto;
     }
@@ -169,12 +202,12 @@
         margin: 3rem 0;
     }
 
-    .detail-box-top {
-        padding-bottom: 0;
+    .detail-box .btn{
+        font-size: 2rem;
     }
 
-    .detail-box-top a {
-        font-size: 1.5rem;
+    .detail-box-top {
+        padding-bottom: 0;
     }
 
     .companies {
@@ -185,6 +218,7 @@
 
     .companies p {
         text-align: center;
+        font-size: 1.9rem;
     }
 
     .companies-logos {

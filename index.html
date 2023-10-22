@@ -19,6 +19,38 @@
 </head>
 
 <body>
+    <!-- Overlay for moadal -->
+    <div class="overlay"></div>
+
+    <!-- Search modal -->
+    <div class="search-modal f-col" id="search-modal" tabindex="-1" aria-labelledby="search-modal-label"
+        aria-hidden="true">
+        <div class="modal-header f-row">
+            <h2>Search</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M1.0166 11L11.0001 1.0052" stroke="#004D7B" stroke-width="2" stroke-linecap="round" />
+                    <path d="M1 1L10.9835 10.9948" stroke="#004D7B" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="modal-body">
+            <input type="search" class="search-input" placeholder="Search">
+        </div>
+
+        <div class="modal-footer f-row">
+            <button type="button" class="btn">
+                Search
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20 20L14 14M16 9C16 9.91925 15.8189 10.8295 15.4672 11.6788C15.1154 12.5281 14.5998 13.2997 13.9497 13.9497C13.2997 14.5998 12.5281 15.1154 11.6788 15.4672C10.8295 15.8189 9.91925 16 9 16C8.08075 16 7.1705 15.8189 6.32122 15.4672C5.47194 15.1154 4.70026 14.5998 4.05025 13.9497C3.40024 13.2997 2.88463 12.5281 2.53284 11.6788C2.18106 10.8295 2 9.91925 2 9C2 7.14348 2.7375 5.36301 4.05025 4.05025C5.36301 2.7375 7.14348 2 9 2C10.8565 2 12.637 2.7375 13.9497 4.05025C15.2625 5.36301 16 7.14348 16 9Z"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header-section layout-container">
         <div class="header-left f-row">
@@ -37,7 +69,7 @@
             </div>
 
             <div class="header-buttons f-row">
-                <button class="header-btn search-icon nav-link" aria-label="Search" title="Search">
+                <button class="header-btn search-icon" id="search-btn" aria-label="Search" title="Search">
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M20 20L14 14M16 9C16 9.91925 15.8189 10.8295 15.4672 11.6788C15.1154 12.5281 14.5998 13.2997 13.9497 13.9497C13.2997 14.5998 12.5281 15.1154 11.6788 15.4672C10.8295 15.8189 9.91925 16 9 16C8.08075 16 7.1705 15.8189 6.32122 15.4672C5.47194 15.1154 4.70026 14.5998 4.05025 13.9497C3.40024 13.2997 2.88463 12.5281 2.53284 11.6788C2.18106 10.8295 2 9.91925 2 9C2 7.14348 2.7375 5.36301 4.05025 4.05025C5.36301 2.7375 7.14348 2 9 2C10.8565 2 12.637 2.7375 13.9497 4.05025C15.2625 5.36301 16 7.14348 16 9Z"
@@ -46,7 +78,8 @@
                 </button>
 
                 <button class="header-btn nav-btn" type="button">
-                    <svg class="nav-btn-svg" width="37" height="20" viewBox="0 0 37 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="nav-btn-svg" width="37" height="20" viewBox="0 0 37 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path d="M34.918 2L2.91797 2" stroke="#094B72" stroke-width="4" stroke-linecap="round" />
                         <path d="M34.918 10L2.91797 10" stroke="#094B72" stroke-width="4" stroke-linecap="round" />
                         <path d="M34.918 18L2.91797 18" stroke="#094B72" stroke-width="4" stroke-linecap="round" />
