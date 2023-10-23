@@ -4,7 +4,7 @@
         padding: 2rem 4rem;
     }
 
-    .navbar-box{
+    .navbar-box {
         margin-left: 4rem;
     }
 }
@@ -20,7 +20,7 @@
         padding: 1rem 3rem;
     }
 
-    .search-modal{
+    .search-modal {
         width: 70%;
     }
 
@@ -30,7 +30,7 @@
         margin: 0 2rem 0 0;
     }
 
-    .navbar-box{
+    .navbar-box {
         margin-left: 0;
     }
 
@@ -110,8 +110,16 @@
         text-align: left;
     }
 
+    /* About section */
+
     .about-section {
         height: max-content;
+    }
+
+    /* Clients section */
+
+    .clients-section .cards-box .card {
+        margin: 0;
     }
 }
 
@@ -126,15 +134,15 @@
         width: 100%;
     }
 
-    .search-modal{
+    .search-modal {
         width: 80%;
     }
 
     .search-modal .modal-header h2 {
         font-size: 3rem;
     }
-    
-    .search-modal .modal-body input{
+
+    .search-modal .modal-body input {
         width: 100%;
         padding: 1rem;
         border: 1px solid #b3befd;
@@ -142,14 +150,14 @@
         outline: none;
         font-size: 2.8rem;
     }
-    
-    .search-modal .modal-footer button{
+
+    .search-modal .modal-footer button {
         font-size: 2.5rem;
     }
 
     /* Header */
-    .header-section{
-        flex-direction: column; 
+    .header-section {
+        flex-direction: column;
     }
 
     .header-buttons {
@@ -157,7 +165,7 @@
         margin-right: 0;
     }
 
-    .header-buttons .nav-btn{
+    .header-buttons .nav-btn {
         display: block;
     }
 
@@ -175,7 +183,7 @@
         margin: 0;
     }
 
-    .navbar-nav .nav-item{
+    .navbar-nav .nav-item {
         font-size: 2.5rem;
         font-weight: bold;
         margin: 1.5rem auto;
@@ -194,11 +202,11 @@
         width: 100%;
     }
 
-    .detail-box h2{
+    .detail-box h2 {
         margin: 3rem 0;
     }
 
-    .detail-box .btn{
+    .detail-box .btn {
         font-size: 2rem;
     }
 
@@ -347,7 +355,8 @@
     /* clients-section */
 
     .clients-section .cards-box {
-        display: block;
+        width: 90vw;
+        overflow-x: hidden;
     }
 
     .clients-section h2 {
@@ -360,9 +369,10 @@
     }
 
     .clients-section .cards-box .card {
-        padding: 2rem;
+        padding: 1rem;
         font-family: 'Poppins', sans-serif;
         align-content: center;
+        min-width: 90%;
     }
 
     .clients-section .card .text {
@@ -444,9 +454,10 @@
         height: fit-content;
     }
 
-    .about-section .f-row .about-text h2 { 
+    .about-section .f-row .about-text h2 {
         margin: 3rem 0 0 0;
     }
+
     .about-section .f-row .about-text p {
         font-size: 2.3rem;
         margin: 0;
@@ -560,7 +571,9 @@
         font-size: 1.5rem;
     }
 
-    .contact-section input, .contact-section select, .contact-section textarea {
+    .contact-section input,
+    .contact-section select,
+    .contact-section textarea {
         font-size: 1.5rem;
     }
 }

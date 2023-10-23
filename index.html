@@ -19,16 +19,17 @@
 </head>
 
 <body>
-    <!-- Overlay for moadal -->
+    <!-- Overlay -->
     <div class="overlay"></div>
+    <!-- end Overlay -->
 
     <!-- Search modal -->
     <div class="search-modal f-col" id="search-modal" tabindex="-1" aria-labelledby="search-modal-label"
-        aria-hidden="true">
-        <div class="modal-header f-row">
-            <h2>Search</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+    aria-hidden="true">
+    <div class="modal-header f-row">
+        <h2>Search</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path d="M1.0166 11L11.0001 1.0052" stroke="#004D7B" stroke-width="2" stroke-linecap="round" />
                     <path d="M1 1L10.9835 10.9948" stroke="#004D7B" stroke-width="2" stroke-linecap="round" />
                 </svg>
@@ -50,6 +51,9 @@
             </button>
         </div>
     </div>
+    <!-- end Search modal -->
+    
+    <!-- Read more modal -->
 
     <!-- Header -->
     <header class="header-section layout-container">
@@ -285,8 +289,47 @@
     <!-- Client section -->
     <section id="clients" class="clients-section">
         <div class="layout-container f-col">
-            <h2>Clients Testimonial</h2>
-            <div class="cards-box f-row">
+            <div><h2>Clients Testimonial</h2></div>
+            <div class="cards-box carousel f-row">
+                <div class="card f-col active-card">
+                    <div class="text f-col">
+                        <h3>Incredible Experience</h3>
+                        <p>We had an incredible experience working with Landify and were
+                            impressed they made such a big difference in only three weeks.
+                            Our team is so grateful for the wonderful improvements they
+                            made and their ability to get familiar with the concept so
+                            quickly.</p>
+                    </div>
+                    <div class="triangle"></div>
+                    <div class="client-details f-row">
+                        <div class="details-img">
+                            <img width="50" height="50" src="./images/sarah.png" alt="Sarah Bentaher">
+                        </div>
+                        <div class="details-text">
+                            <h4>Sarah Bentaher</h4>
+                            <p>CEO, MA Industires</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card f-col">
+                    <div class="text f-col">
+                        <h3>Dependable, Responsive, Professional Partner</h3>
+                        <p>Fermin Apps has collaborated with Landify team for several
+                            projects such as Photo Sharing Apps and Custom Social
+                            Networking Apps. The experience has been pleasant,
+                            professional and exceeding our expectations. </p>
+                    </div>
+                    <div class="triangle"></div>
+                    <div class="client-details f-row">
+                        <div class="details-img">
+                            <img width="50" height="50" src="./images/salima.png" alt="Salima Alami">
+                        </div>
+                        <div class="details-text">
+                            <h4>Salima Alami</h4>
+                            <p>CEO, FOODSO GROUP</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="card f-col">
                     <div class="text f-col">
                         <h3>Incredible Experience</h3>
@@ -470,6 +513,7 @@
     <!-- end Footer -->
 
     <!-- Script -->
+    <script src="./js/index.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

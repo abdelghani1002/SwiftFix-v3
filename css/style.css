@@ -161,16 +161,16 @@ a:hover {
     border-radius: 0.3rem;
 }
 
-.search-modal .modal-header .btn-close:hover svg path{
+.search-modal .modal-header .btn-close:hover svg path {
     stroke: #e00000;
 }
 
-.search-modal .modal-body{
+.search-modal .modal-body {
     margin: 2rem 0;
     padding: 0 3rem;
 }
 
-.search-modal .modal-body input{
+.search-modal .modal-body input {
     width: 100%;
     height: 5rem;
     padding: 1.5rem;
@@ -180,15 +180,16 @@ a:hover {
     font-size: 1.8rem;
 }
 
-.search-modal .modal-footer{
+.search-modal .modal-footer {
     justify-content: center;
 }
 
-.search-modal .modal-footer button{
+.search-modal .modal-footer button {
     padding: 1rem 2rem;
     font-size: 1.5rem;
     gap: 1rem;
 }
+
 /* Header */
 
 .header-section {
@@ -198,6 +199,7 @@ a:hover {
     position: fixed;
     width: 100vw;
     height: auto;
+    z-index: 10;
     top: 0;
     backdrop-filter: blur(15px);
     box-shadow: 0px 2px 40px rgba(88, 77, 77, 0.1);
@@ -212,7 +214,7 @@ a:hover {
     margin-right: auto;
 }
 
-.header-buttons #search-btn svg:hover{
+.header-buttons #search-btn svg:hover {
     cursor: pointer;
     transform: rotate(10deg) scale(1.1);
 }
@@ -262,11 +264,11 @@ a:hover {
     justify-content: center;
 }
 
-.navbar-nav .nav-item a{
+.navbar-nav .nav-item a {
     color: rgb(67, 66, 66);
 }
 
-.navbar-nav .nav-item a:hover{
+.navbar-nav .nav-item a:hover {
     color: var(--blue-10);
 }
 
@@ -522,10 +524,44 @@ a:hover {
     height: fit-content;
 }
 
+.clients-section .layout-container {
+    align-items: center;
+}
+
 .clients-section h2 {
     font-size: 2.7rem;
     font-family: 'Playfair Display';
     margin: 2rem auto;
+}
+
+.clients-section .layout-container .cards-box {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+}
+
+.clients-section .layout-container ::-webkit-scrollbar {
+    display: none;
+}
+
+.clients-section .layout-container ::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+
+.clients-section .layout-container ::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+.clients-section .cards-box .card {
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    align-content: center;
+    min-width: 95%;
+    margin: 0 4rem;
+}
+
+.active-card {
+    border-radius: 2rem;
 }
 
 .clients-section h3 {
@@ -536,12 +572,6 @@ a:hover {
     font-weight: 500;
 }
 
-.clients-section .cards-box .card {
-    padding: 2rem;
-    font-family: 'Poppins', sans-serif;
-    align-content: center;
-}
-
 .clients-section .card .text {
     height: 100%;
     background-color: #ffffff;
@@ -550,7 +580,7 @@ a:hover {
     align-content: center;
     line-height: 2rem;
     font-size: 1.25rem;
-    padding: 2rem;
+    padding: 2rem 4rem;
     box-shadow: #094b7221 0 0 15px 1px;
     border-radius: 1rem;
 }
@@ -588,9 +618,10 @@ a:hover {
     background-color: #ffffff;
     width: 2rem;
     height: 1.5rem;
+    z-index: 0;
     clip-path: polygon(0 0, 50% 100%, 100% 0);
     align-self: center;
-    margin-top: auto;
+    margin-top: 0;
 }
 
 /* Question sections */
@@ -809,7 +840,7 @@ a:hover {
     width: 100%;
 }
 
-.faq-section .layout-container .faq-item .faq-item-btn:hover{
+.faq-section .layout-container .faq-item .faq-item-btn:hover {
     background-color: #eeeeee;
 }
 
@@ -821,10 +852,17 @@ a:hover {
 
 .faq-section .layout-container .faq-item-btn-icon {
     margin: auto 0;
+    transition: rotate(90deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.icon-rotate{
+    transform: rotate(90deg);
 }
 
 .faq-section .layout-container .faq-item .faq-item-txt {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
     background-color: #f3f3f3;
     border-bottom: 1px solid #c5cacb;
     border-left: 1px solid #c5cacb;
@@ -832,8 +870,14 @@ a:hover {
     border-top: none;
     border-bottom-right-radius: 0.8rem;
     border-bottom-left-radius: 0.8rem;
-    padding: 1rem 2rem;
+    padding: 0;
     font-size: 1.4rem;
+    transition: 0.4s ease;
+}
+
+.faq-section .layout-container .faq-item .open-faq-txt{
+    max-height: fit-content ;
+    padding: 1rem 2rem;
 }
 
 
@@ -1053,6 +1097,6 @@ a:hover {
 
 /*  */
 
-.open{
+.open {
     display: block !important;
 }
