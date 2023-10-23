@@ -175,10 +175,6 @@
         margin: 0;
     }
 
-    .navbar-box.open{
-        display: block;
-    }
-
     .navbar-nav .nav-item{
         font-size: 2.5rem;
         font-weight: bold;
@@ -484,7 +480,7 @@
 
     .faq-section .faq-item .faq-item-btn p,
     .faq-section .faq-item .faq-item-txt div {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
 
     .faq-section .layout-container .faq-items-box {

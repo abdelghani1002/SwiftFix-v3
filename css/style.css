@@ -809,6 +809,10 @@ a:hover {
     width: 100%;
 }
 
+.faq-section .layout-container .faq-item .faq-item-btn:hover{
+    background-color: #eeeeee;
+}
+
 .faq-section .layout-container .faq-item .f-row {
     align-content: center;
     justify-content: space-between;
@@ -820,6 +824,7 @@ a:hover {
 }
 
 .faq-section .layout-container .faq-item .faq-item-txt {
+    display: none;
     background-color: #f3f3f3;
     border-bottom: 1px solid #c5cacb;
     border-left: 1px solid #c5cacb;
@@ -1044,4 +1049,10 @@ a:hover {
     font-weight: 500;
     padding: 1rem 2rem;
     margin: auto;
+}
+
+/*  */
+
+.open{
+    display: block !important;
 }

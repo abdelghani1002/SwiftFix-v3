@@ -9,6 +9,7 @@ let overlay = document.querySelector(".overlay");
 navBtn.addEventListener('click', () => {
     if (navBar.classList.toggle("open")){
         overlay.style.top = header.offsetHeight + "px";
+        searchModal.style.display = "none";
         overlay.style.display = "block";
     }else
         overlay.style.display = "none";
@@ -23,6 +24,7 @@ let closeBtn = document.querySelector(".btn-close");
 // search button
 searchBtn.addEventListener("click", () => {
     searchModal.style.display = "flex";
+    overlay.style.top = "0";
     overlay.style.display = "block";
 })
 
