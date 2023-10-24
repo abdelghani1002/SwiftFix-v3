@@ -24,12 +24,12 @@
     <!-- end Overlay -->
 
     <!-- Search modal -->
-    <div class="search-modal f-col" id="search-modal" tabindex="-1" aria-labelledby="search-modal-label"
-    aria-hidden="true">
-    <div class="modal-header f-row">
-        <h2>Search</h2>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+    <div class="search-modal modal f-col" id="search-modal" tabindex="-1" aria-labelledby="search-modal-label"
+        aria-hidden="true">
+        <div class="modal-header f-row">
+            <h2>Search</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path d="M1.0166 11L11.0001 1.0052" stroke="#004D7B" stroke-width="2" stroke-linecap="round" />
                     <path d="M1 1L10.9835 10.9948" stroke="#004D7B" stroke-width="2" stroke-linecap="round" />
                 </svg>
@@ -52,8 +52,53 @@
         </div>
     </div>
     <!-- end Search modal -->
-    
+
     <!-- Read more modal -->
+    <div class="read-more-modal modal f-col">
+        <div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M1.0166 11L11.0001 1.0052" stroke="#004D7B" stroke-width="2" stroke-linecap="round" />
+                    <path d="M1 1L10.9835 10.9948" stroke="#004D7B" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+        <div class="read-more-title">
+            <h2>Read more about our services</h2>
+        </div>
+        <div class="read-more-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam exercitationem sunt impedit pariatur neque
+                fugit obcaecati nulla voluptatibus culpa quod possimus, recusandae sit, nesciunt minima, inventore aut
+                rem hic itaque reiciendis sequi molestias quisquam. Quod, distinctio optio. Dolore autem sint adipisci.
+                Consequuntur dolore vitae commodi quas pariatur architecto ipsam, illo sint maiores tenetur dignissimos
+                nobis, labore ab? Sunt dolores eius repudiandae repellendus et magnam nulla quam, inventore, sed ipsum
+                amet recusandae distinctio aliquid reprehenderit natus! Sequi illo dolor temporibus est aperiam esse
+                vero quo similique, molestias earum incidunt rem accusamus atque quas. Doloremque, qui iste sit
+                inventore quaerat nisi repellendus?
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aliquid nobis est repellendus rem fuga
+                veniam magni odit natus, minus commodi, inventore, enim illo harum. Repellat magnam laudantium ullam a!
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta modi beatae suscipit quae numquam
+                commodi magnam adipisci laudantium dolorem quidem, doloremque quo amet! Repellendus accusantium labore
+                qui. Rem consequuntur repellat fuga autem temporibus neque sint iste deserunt dolores amet dolorum
+                blanditiis consectetur obcaecati facilis impedit esse, enim delectus labore possimus?
+            </p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam exercitationem sunt impedit pariatur neque
+                fugit obcaecati nulla voluptatibus culpa quod possimus, recusandae sit, nesciunt minima, inventore aut
+                rem hic itaque reiciendis sequi molestias quisquam. Quod, distinctio optio. Dolore autem sint adipisci.
+                Consequuntur dolore vitae commodi quas pariatur architecto ipsam, illo sint maiores tenetur dignissimos
+                nobis, labore ab? Sunt dolores eius repudiandae repellendus et magnam nulla quam, inventore, sed ipsum
+                amet recusandae distinctio aliquid reprehenderit natus! Sequi illo dolor temporibus est aperiam esse
+                vero quo similique, molestias earum incidunt rem accusamus atque quas. Doloremque, qui iste sit
+                inventore quaerat nisi repellendus?
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aliquid nobis est repellendus rem fuga
+                veniam magni odit natus, minus commodi, inventore, enim illo harum. Repellat magnam laudantium ullam a!
+            </p>
+        </div>
+    </div>
+    <!-- end Read more modal -->
 
     <!-- Header -->
     <header class="header-section layout-container">
@@ -289,7 +334,9 @@
     <!-- Client section -->
     <section id="clients" class="clients-section">
         <div class="layout-container f-col">
-            <div><h2>Clients Testimonial</h2></div>
+            <div>
+                <h2>Clients Testimonial</h2>
+            </div>
             <div class="cards-box carousel f-row">
                 <div class="card f-col active-card">
                     <div class="text f-col">

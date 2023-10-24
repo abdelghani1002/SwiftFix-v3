@@ -7,11 +7,11 @@ let overlay = document.querySelector(".overlay");
 
 // button event
 navBtn.addEventListener('click', () => {
-    if (navBar.classList.toggle("open")){
+    if (navBar.classList.toggle("open")) {
         overlay.style.top = header.offsetHeight + "px";
         searchModal.style.display = "none";
         overlay.style.display = "block";
-    }else
+    } else
         overlay.style.display = "none";
 })
 
@@ -19,7 +19,7 @@ navBtn.addEventListener('click', () => {
 /* Search */
 let searchBtn = document.querySelector("#search-btn");
 let searchModal = document.querySelector(".search-modal");
-let closeBtn = document.querySelector(".btn-close");
+let modalCloseBtns = Array.from(document.querySelectorAll(".modal .btn-close"));
 
 // search button
 searchBtn.addEventListener("click", () => {
@@ -28,30 +28,44 @@ searchBtn.addEventListener("click", () => {
     overlay.style.display = "block";
 })
 
-// close button
-closeBtn.addEventListener('click', () => {
-    overlay.style.display = "none";
-    searchModal.style.display = "none";
+// close buttons
+let closeModal = (closeBtn) => {
+    overlay.style.display = 'none';
+    closeBtn.parentNode.parentNode.style.display = "none";
+}
+
+modalCloseBtns.forEach((closeBtn) => {
+    closeBtn.addEventListener('click', () => {
+        closeModal(closeBtn);
+    })
 })
+
+/* Read More Modal */
+let readModal = document.querySelector(".read-more-modal");
+let readButtons = Array.from(document.querySelectorAll(".read-more-btn"));
+readButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        overlay.style.display = 'block';
+        readModal.style.display = "block";
+    })
+})
+
+
 
 // Document event
 document.addEventListener("click", (event) => {
-    if (navBar.classList.contains("open") && !navBar.contains(event.target) && !navBtn.contains(event.target)) {
+    if (navBar.classList.contains("open") && !navBar.contains(event.target) && !navBtn.contains(event.target) && !searchBtn.contains(event.target)) {
         overlay.style.display = "none";
         overlay.style.top = "0";
         navBar.classList.remove("open");
     }
 
-    if (searchBtn.contains(event.target)){
-        overlay.style.display = "block";
-    }
-
-    if (event.target == overlay){
+    if (event.target == overlay) {
         searchModal.style.display = "none";
+        readModal.style.display = "none";
+        overlay.style.top = "0";
         overlay.style.display = "none";
     }
 });
 
-/* Read More Modal */
-
-
+document.on

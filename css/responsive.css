@@ -20,8 +20,19 @@
         padding: 1rem 3rem;
     }
 
+    /* Modals */
+
     .search-modal {
         width: 70%;
+    }
+
+    .read-more-modal{
+        width: 85vw;
+        font-size: 1.5rem;
+    }
+
+    .read-more-modal h2{
+        font-size: 2rem;
     }
 
     /* Header */
@@ -134,8 +145,19 @@
         width: 100%;
     }
 
+    /* Modals */
     .search-modal {
         width: 80%;
+        font-size: 1.8rem;
+    }
+
+    .read-more-modal {
+        width: 90vw;
+        font-size: small;
+    }
+
+    .read-more-modal h2{
+        font-size: 3rem;
     }
 
     .search-modal .modal-header h2 {
@@ -263,7 +285,6 @@
     /* Why section */
 
     .why-section {
-        height: fit-content;
         padding: 5rem 0;
     }
 
@@ -272,13 +293,12 @@
     }
 
     .why-section .cards {
-        grid-area: cards;
         display: block;
     }
 
     .why-section .card .icon {
-        width: 4rem;
-        height: 4rem;
+        width: 5rem;
+        height: 5rem;
     }
 
     .why-section .text {
@@ -286,37 +306,27 @@
     }
 
     .why-section .card {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-        margin: 5rem 10rem;
+        margin: 5rem 0;
         padding: 1rem 2rem;
-        box-shadow: 0px 18px 58px 16px rgba(26, 26, 26, 0.02);
-        border-radius: 1rem;
-        background-color: #FCFCFC;
+        border-radius: 2rem;
     }
 
     .why-section .text h2 {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
-    .why-section p {
-        font-family: 'Poppins', sans-serif;
-        color: var(--grey-1);
-        line-height: 2.8rem;
-        font-size: 1.8rem;
+    .why-section .text p {
+        font-size: 2rem;
     }
 
     .why-section .card h3 {
-        font-size: 2rem;
-        margin: 1rem 0;
+        font-size: 2.5rem;
         text-align: center;
     }
 
     .why-section .card p {
-        font-size: 1.5rem;
-        letter-spacing: normal;
+        font-size: 2rem;
         text-align: center;
     }
 
@@ -364,8 +374,9 @@
     }
 
     .clients-section h3 {
-        font-size: 2rem;
+        font-size: 2.2rem;
         font-weight: 600;
+        line-height: 2.6rem;
     }
 
     .clients-section .cards-box .card {
@@ -376,16 +387,16 @@
     }
 
     .clients-section .card .text {
-        font-size: 1.5rem;
+        font-size: 2rem;
         letter-spacing: normal;
     }
 
     .clients-section .card .client-details h4 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .clients-section .card .client-details p {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     /* Question section */
@@ -393,9 +404,28 @@
     .question-section h2,
     .question-section p,
     .question-section .call-btn {
-        margin: 1rem auto;
+        margin: 1rem;
         text-align: center;
+        align-self: center;
     }
+
+    .question-section p{
+        font-size: 2rem;
+        padding: 0;
+        width: fit-content;
+    }
+
+    .question-section .call-btn {
+        font-size: 3rem;
+        width: auto;
+        font-weight: 500;
+    }
+
+    .question-section .btn svg {
+        width: 3rem;
+        height: auto;
+    }
+    
 
     /* Footer */
 
@@ -522,6 +552,10 @@
     }
 
     .professional-section .f-row .professional-text p {
+        font-size: 2.3rem;
+    }
+
+    .professional-section .f-row .professional-text .btn {
         font-size: 2rem;
     }
 
@@ -529,10 +563,11 @@
 
     .services-section .layout-container h2 {
         font-size: 3.5rem;
+        margin-bottom: 3rem;
     }
 
-    .services-section .layout-container h3 {
-        font-size: 2.5rem;
+    .services-section .layout-container .card h3 {
+        font-size: 3rem;
     }
 
     .services-section .layout-container .services-cards {
@@ -541,12 +576,17 @@
     }
 
     .services-section .layout-container .f-row .card {
-        width: 70%;
+        width: 90%;
         align-self: center;
+        font-weight: 800;
     }
 
     .services-section .layout-container .f-row .card p {
-        font-size: 1.5rem;
+        font-size: 2.2rem;
+    }
+
+    .services-section .layout-container .card .btn {
+        font-size: 2.2rem;
     }
 
     /* Contact section */
@@ -562,18 +602,28 @@
     }
 
     .contact-section form {
-        width: 80%;
+        width: 95%;
         align-self: center;
         margin-bottom: 5rem;
     }
 
     .contact-section .contact-label {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
-    .contact-section input,
-    .contact-section select,
-    .contact-section textarea {
-        font-size: 1.5rem;
+    .contact-section input,.contact-section input::placeholder,
+    .contact-section select,.contact-section select::placeholder,
+    .contact-section textarea, .contact-section textarea::placeholder {
+        font-size: 2.2rem;
+        height: 7rem;
+    }
+
+    .contact-section textarea{
+        height: 10rem;
+    }
+
+    .contact-section button {
+        font-size: 2.2rem;
+        font-weight: 600;
     }
 }

@@ -16,9 +16,7 @@ let nextClient = () => {
     window.innerWidth < 1024 ?
         carousel.scrollLeft = carousel.querySelector(".active-card").offsetLeft - 35
     :
-        carousel.scrollLeft = carousel.querySelector(".active-card").offsetLeft - (0.1 * window.innerWidth)
-
-    
+        carousel.scrollLeft = carousel.querySelector(".active-card").offsetLeft - (0.1 * window.innerWidth) 
 }
 
 setInterval(nextClient, 3000);
