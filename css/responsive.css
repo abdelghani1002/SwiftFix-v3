@@ -182,6 +182,10 @@
         flex-direction: column;
     }
 
+    .navbar-brand{
+        object-fit: 100%;
+    }
+
     .header-buttons {
         justify-content: end;
         margin-right: 0;

@@ -247,6 +247,10 @@ a:hover {
     justify-content: space-between;
 }
 
+.header-left:first-child a svg{
+    max-width: 25vw;
+}
+
 .header-buttons {
     justify-content: end;
     margin-right: auto;
@@ -284,9 +288,6 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.navbar-nav {
     list-style-type: none;
     padding: 0;
 }
