@@ -16,7 +16,7 @@ navBtn.addEventListener('click', () => {
 })
 
 
-/* Search */
+/* Search modal */
 let searchBtn = document.querySelector("#search-btn");
 let searchModal = document.querySelector(".search-modal");
 let modalCloseBtns = Array.from(document.querySelectorAll(".modal .btn-close"));

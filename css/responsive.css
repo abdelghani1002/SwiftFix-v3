@@ -153,7 +153,10 @@
 
     .read-more-modal {
         width: 90vw;
+        top: 10%;
         font-size: small;
+        overflow-y: scroll;
+        height: 90%;
     }
 
     .read-more-modal h2{
@@ -182,8 +185,8 @@
         flex-direction: column;
     }
 
-    .navbar-brand{
-        object-fit: 100%;
+    .header-left:first-child a svg{
+        max-width: 35vw;
     }
 
     .header-buttons {
