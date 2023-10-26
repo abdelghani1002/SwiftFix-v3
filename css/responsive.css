@@ -654,11 +654,12 @@
     }
 
     /* Alert */
-    .alert {
-        font-size: 2.2rem;
+    .alert{
+        padding: 1rem;
+        font-size: 2rem;
     }
 
     .alert img {
-        width: 5rem;
+        width: 3rem;
     }
 }

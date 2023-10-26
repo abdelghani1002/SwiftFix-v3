@@ -11,11 +11,12 @@ let isValidForm;
 /* Validation functions */
 const validateName = (name) => {
     let min = 5, max = 30;
-    let errorMessage;
+    let errorMessage = "Invalide";
     let namePattern = /^[a-zA-Zéèçà -]+$/;
     name = name.trim();
     let isValidName = namePattern.test(name) && name.length <= max && name.length >= min;
     if (!isValidName) {
+        if (/[!@#$%^&*()_+{}\[\]:;<>,.?~\\\/]/.test(name)) errorMessage = "Name should not include special characters";
         if (!name.length) errorMessage = "Name is required!";
         if (name.length < min) errorMessage = "Your name must be at least 5 characters long.";
         if (name.length > max) errorMessage = "Your name cannot be more than 30 characters long.";
@@ -25,7 +26,7 @@ const validateName = (name) => {
 
 const validatePhone = (phone) => {
     let phonePattern = /\+212-+(6|7)+[0-9]{8}$/;
-    let errorMessage;
+    let errorMessage = "Invalide";
     phone = phone.trim();
     let isValidPhone = phonePattern.test(phone);
     if (!isValidPhone)
@@ -35,7 +36,7 @@ const validatePhone = (phone) => {
 
 const validateEmail = (email) => {
     let emailPattern = /^[a-zA-z][a-zA-Z0-9\-\.\_]{2,12}@[a-zA-Z]{3,}\.[a-zA-Z]{2,}$/;
-    let errorMessage;
+    let errorMessage = "Invalide";
     email.trim();
     let isValidEmail = emailPattern.test(email);
     !isValidEmail ? errorMessage = "Invalide email!" : null
@@ -43,7 +44,7 @@ const validateEmail = (email) => {
 }
 
 const validateSubject = (subject) => {
-    let errorMessage;
+    let errorMessage = "Invalide";
     let isValidatSubject = subject.value !== "";
     return [isValidatSubject, "Subject is required!"];
 }
@@ -78,18 +79,27 @@ form.addEventListener('input', (event) => {
             isValidName ? showSuccess(clientName) : showError(clientName, nameErrorMessage)
             break;
         case phone:
+            !clientName.value ? showError(clientName, "Name is required!") : null
             let [isValidPhone, phoneErrorMessage] = validatePhone(phone.value);
             isValidPhone ? showSuccess(phone) : showError(phone, phoneErrorMessage)
             break;
         case email:
+            !clientName.value ? showError(clientName, "Name is required!") : null
+            !phone.value ? showError(phone, "Phone is required!") : null
             let [isValidEmail, emailErrorMessage] = validateEmail(email.value);
             isValidEmail ? showSuccess(email) : showError(email, emailErrorMessage)
             break;
         case subject:
+            !clientName.value ? showError(clientName, "Name is required!") : null
+            !phone.value ? showError(phone, "Phone is required!") : null
+            !email.value ? showError(email, "Email is required!") : null
             let [isValidSubject, subjectErrorMessage] = validateSubject(subject.value);
             isValidSubject ? showSuccess(subject) : showError(subject, subjectErrorMessage)
             break;
         case message:
+            !clientName.value ? showError(clientName, "Name is required!") : null
+            !phone.value ? showError(phone, "Phone is required!") : null
+            !email.value ? showError(email, "Email is required!") : null
             !subject.value ? showError(subject, "Subject is required!") : null
             let [isValidMessage, messageErrorMessage] = validateMessage(message.value);
             isValidMessage ? showSuccess(message) : showError(message, messageErrorMessage)
