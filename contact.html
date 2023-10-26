@@ -99,6 +99,14 @@
     </div>
     <!-- end Read more modal -->
 
+    <!-- alert success -->
+    <div class="alert ">
+        <p class="text">*Your message has been sent successfully!*</p>
+        <img src="./images/icons/success.png" alt="success">
+        <p>We will be in touch with you as soon as possible</p>
+    </div>
+    <!-- ens alert success -->
+
     <!-- Header -->
     <header class="header-section layout-container">
         <div class="header-left f-row">
@@ -158,53 +166,61 @@
     <!-- end Header -->
 
     <!-- Contact section -->
+
+
+
     <section class="contact-section">
         <div class="layout-container f-row layout_padding-bottom">
             <div class="f-col">
                 <h2>CONTACT US</h2>
                 <div class="f-row">
                     <div class="contact-form f-col">
-                        <form action="#" class="f-col" target="_blank" name="clinet_contact" method="POST">
+                        <form id="form" action="" class="f-col" name="client_contact" method="POST">
                             <div class="form-group f-col">
-                                <label for="Name" class="contact-label">Name</label>
-                                <input id="Name" type="text" placeholder="Name" autocomplete="off">
+                                <label for="name" class="contact-label">Name</label>
+                                <input id="name" class="" type="text" placeholder="Enter your name">
+                                <span class="validation-msg"></span>
                             </div>
                             <div class="form-group f-col">
-                                <label for="Phone" class="contact-label">Phone</label>
-                                <input id="Phone" type="tel" placeholder="Phone Number" autocomplete="off">
+                                <label for="phone" class="contact-label">Phone</label>
+                                <input class="" id="phone" type="tel" placeholder="+212-(6||7)00000000">
+                                <span class="validation-msg"></span>
                             </div>
                             <div class="form-group f-col">
-                                <label for="Email" class="contact-label">Email</label>
-                                <input id="Email" type="email" placeholder="Email" autocomplete="on">
+                                <label for="email" class="contact-label">Email</label>
+                                <input class="" id="email" type="email" placeholder="Enter email">
+                                <span class="validation-msg"></span>
                             </div>
                             <div class="form-group f-col">
                                 <label for="subject" class="contact-label">Subject</label>
-                                <select id="subject" name="subject">
+                                <select class="" id="subject" name="subject">
                                     <option disabled selected value="">Select subject</option>
                                     <option value="general">General Inquiry</option>
                                     <option value="support">Customer Support</option>
                                     <option value="feedback">Feedback/Suggestions</option>
                                     <option value="other">Other</option>
                                 </select>
+                                <span class="validation-msg"></span>
                             </div>
                             <div class="form-group f-col">
                                 <label for="message" class="contact-label">Message</label>
-                                <textarea id="message" class="message-box" placeholder="Message"
-                                    maxlength="20"></textarea>
+                                <textarea id="message" class="message-box" placeholder="Enter your message"
+                                    maxlength="400" minlength="4"></textarea>
+                                <span class="validation-msg"></span>
                             </div>
                             <div class="d-flex">
-                                <button type="submit" class="btn">
+                                <button class="btn submit-btn" disabled aria-disabled="true">
                                     SEND
                                 </button>
                             </div>
                         </form>
                     </div>
                     <div class="contact-map f-col">
-                        <iframe title="google maps"
+                        <!-- <iframe title="google maps"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26997.794906452247!2d-8.517276749999999!3d32.23858744999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdaefdd4fcbbdbc1%3A0x846cbd9f328a7bdb!2sYouCode!5e0!3m2!1sen!2sma!4v1697234866832!5m2!1sen!2sma"
                             width="100" height="100" allowfullscreen="" aria-hidden="false" tabindex="0"
                             referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                        </iframe> -->
                     </div>
                 </div>
             </div>
@@ -334,6 +350,7 @@
 
     <!-- Script -->
     <script src="./js/script.js"></script>
+    <script src="./js/contact.js"></script>
 </body>
 
 </html>

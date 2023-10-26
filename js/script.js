@@ -15,7 +15,6 @@ navBtn.addEventListener('click', () => {
         overlay.style.display = "none";
 })
 
-
 /* Search modal */
 let searchBtn = document.querySelector("#search-btn");
 let searchModal = document.querySelector(".search-modal");
@@ -50,22 +49,11 @@ readButtons.forEach(btn => {
     })
 })
 
-
-
-// Document event
-document.addEventListener("click", (event) => {
-    if (navBar.classList.contains("open") && !navBar.contains(event.target) && !navBtn.contains(event.target) && !searchBtn.contains(event.target)) {
-        overlay.style.display = "none";
-        overlay.style.top = "0";
-        navBar.classList.remove("open");
-    }
-
-    if (event.target == overlay) {
-        searchModal.style.display = "none";
-        readModal.style.display = "none";
-        overlay.style.top = "0";
-        overlay.style.display = "none";
-    }
+// out modals click
+overlay.addEventListener("click", (event) => {
+    searchModal.style.display = "none";
+    readModal.style.display = "none";
+    overlay.style.top = "0";
+    navBar.classList.remove("open");
+    overlay.style.display = "none";
 });
-
-document.on
