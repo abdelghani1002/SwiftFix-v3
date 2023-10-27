@@ -209,12 +209,45 @@
 
     .navbar-box {
         display: none;
+        height: fit-content;
         margin: 0;
     }
 
-    .navbar-nav .nav-item {
+    .services-item {
+        width: 100%;
+        position: static;
+    }
+
+    .navbar-nav .nav-item,
+    .services-btn {
         font-size: 2.5rem;
         font-weight: bold;
+    }
+
+    .services-item .services-nav {
+        position: static;
+        display: none;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .services-nav.openServices {
+        display: block;
+    }
+
+    .services-item .services-nav ul {
+        padding: 0;
+        list-style-type: none;
+        justify-self: center;
+    }
+
+    .services-item .services-nav ul li{
+        padding: 1.5rem 0;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .navbar-nav .nav-item {
         margin: 1.5rem auto;
     }
 
@@ -654,7 +687,7 @@
     }
 
     /* Alert */
-    .alert{
+    .alert {
         padding: 1rem;
         font-size: 2rem;
     }

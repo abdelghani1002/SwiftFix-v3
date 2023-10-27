@@ -38,7 +38,8 @@ h3 {
     font-family: 'Playfair Display', serif;
 }
 
-a:hover {
+a:hover,
+.services-btn:hover {
     font-weight: 600;
 }
 
@@ -150,11 +151,11 @@ a:hover {
     font-size: 1.5rem;
 }
 
-.alert .text{
+.alert .text {
     color: rgb(0, 190, 0);
 }
 
-.alert img{
+.alert img {
     width: 5rem;
 }
 
@@ -303,6 +304,7 @@ a:hover {
     border: none;
     background: none;
     align-self: center;
+    cursor: pointer;
 }
 
 .header-buttons .nav-btn {
@@ -338,12 +340,49 @@ a:hover {
     justify-content: center;
 }
 
-.navbar-nav .nav-item a {
+.navbar-nav .nav-item a,
+.services-btn {
     color: rgb(67, 66, 66);
 }
 
-.navbar-nav .nav-item a:hover {
+.navbar-nav .nav-item a:hover,
+.services-btn:hover {
     color: var(--blue-10);
+}
+
+.services-item {
+    min-width: 20%;
+    position: relative;
+}
+
+.services-item .services-nav {
+    position: absolute;
+    background-color: #c0edfcf8;
+    border-radius: 1rem;
+    top: 100%;
+    width: 120%;
+    transform-origin: top center;
+    transform: rotateX(90deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.services-item .services-nav-item {
+    padding: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.services-nav.openServices {
+    transform: rotateX(0deg);
+}
+
+.services-item .services-nav ul {
+    padding-left: 0;
+    list-style-type: none;
+    justify-self: center;
+}
+
+.services-btn img {
+    width: 1.1rem;
 }
 
 /* slider-section */
@@ -1014,7 +1053,7 @@ a:hover {
     font-size: 1.2rem;
 }
 
-.contact-section form .validation-msg img{
+.contact-section form .validation-msg img {
     width: 1.3rem;
 }
 

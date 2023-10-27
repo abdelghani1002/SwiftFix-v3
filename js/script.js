@@ -57,3 +57,16 @@ overlay.addEventListener("click", (event) => {
     navBar.classList.remove("open");
     overlay.style.display = "none";
 });
+
+/* Services navbar */
+let servicesNavBar = document.querySelector(".services-nav");
+let servicesLink = document.querySelector(".services-item");
+
+servicesLink.addEventListener('click', (event) => {
+    servicesNavBar.classList.toggle('openServices');
+    overlay.style.top = header.offsetHeight + "px";
+})
+
+document.addEventListener('click', (event) => {
+    !servicesLink.contains(event.target)  ? servicesNavBar.classList.remove('openServices') : null
+})
