@@ -114,6 +114,9 @@ form.addEventListener('input', (event) => {
 
 submitBtn.addEventListener('click', (event) => {
     event.preventDefault();
+    if (!isValidForm) {
+        return false;
+    }
     let alertMessage = document.querySelector('.alert')
     alertMessage.classList.add('show');
     setTimeout(() => {
